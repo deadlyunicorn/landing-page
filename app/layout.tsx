@@ -22,7 +22,7 @@ export default function RootLayout({
         bg-gradient-to-b overflow-hidden
         from-slate-950 to-black from-85%'>
         <SectionScroller/>
-        <main>
+        <main className='px-4'>
           {children}
         </main>
       </body>
