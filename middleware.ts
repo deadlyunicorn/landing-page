@@ -13,6 +13,8 @@ const middleware = async( request: NextRequest ) => {
       return NextResponse.redirect('https://twitter.com/deadlyunicorn_');
     case "/links":
       return NextResponse.redirect('https://linktr.ee/deadlyunicorn');
+    case "/resume":
+      return NextResponse.redirect('https://cv-job-resume.vercel.app');
 
 
   }
