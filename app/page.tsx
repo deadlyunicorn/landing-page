@@ -1,26 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ToCItem } from "./lib/ToCItem";
+import { PageSection } from "./lib/SectionOutline";
+import { SectionHeader } from "./lib/SectionHeader";
 
 const Home = () => {
   return (
-    <section
-      id="table_of_contents"
-      className="
-        h-[100vh] 
-        flex flex-col justify-evenly">
-
-      <div className="flex flex-col items-center">
-          <h1 className="text-5xl">deadlyunicorn.</h1>
-          <h1 className="text-5xl blur-[2px] absolute">deadlyunicorn.</h1>
+    <PageSection
+      id="table_of_contents">
+      <SectionHeader>
+          <div className="relative overflow-visible">
+            <h1 className="text-4xl md:text-7xl">deadlyunicorn.</h1>
+            <h1 className="text-4xl md:text-7xl blur-[2px] absolute top-0">deadlyunicorn.</h1>
+          </div>
+          
           <h2 className="
             text-2xl font-extralight
-            place-self-start ml-10">
+            place-self-center justify-self-end
+            -ml-[30%]">
             A Web developer
           </h2>
-      </div>
+      </SectionHeader>
 
-      <ul className="flex flex-col gap-y-2 items-center">
+      <ul className="flex flex-col gap-y-4 md:gap-y-12 items-center overflow-visible">
         <Link 
           className="group outline-none"
           tabIndex={0}      
@@ -37,16 +39,16 @@ const Home = () => {
 
       <div className="place-self-end h-[32vh]">
       <Image
-        className="opacity-30  mb-4 
-          absolute right-4 bottom-0"
+        className="
+          scale-x-[-1]
+          opacity-30  mb-4 
+          absolute left-4 bottom-0"
         src={"/deadlyunicorn.png"}
         width={100}
         height={100}
         alt="deadlyunicorn's online presence visualization"/>    
       </div>    
-
-
-    </section>
+    </PageSection>
   )
 }
 
