@@ -1,8 +1,17 @@
+import { SectionHeader } from "../lib/SectionHeader";
+import { PageSection } from "../lib/SectionOutline";
+import { Showcase } from "./Showcase";
+
 export const PortfolioSection = () => (
 
-  <section id="portfolio_section">
-    <h3>This is the portfolio section</h3>
-  </section>
+  <PageSection
+      id="portfolio_section">
+    <SectionHeader>
+        <h1> Portfolio </h1>
+    </SectionHeader>
+    <Showcase/>
+  </PageSection>
+
 )
 
 export default PortfolioSection;
