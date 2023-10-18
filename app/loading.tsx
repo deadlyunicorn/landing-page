@@ -4,6 +4,8 @@ const LoadingPage = () => {
     <aside 
       className="
         flex flex-col items-center justify-center
+        fixed left-0 top-0 bg-gradient-to-b overflow-hidden
+        from-slate-950 to-black from-85%
         w-[100vw] h-[100vh] backdrop-blur-md"
       aria-label="loading page">
 

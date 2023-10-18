@@ -21,10 +21,10 @@ export default function RootLayout({
         text-slate-200 w-[100vw]
         bg-gradient-to-b overflow-hidden
         from-slate-950 to-black from-85%'>
-        <SectionScroller/>
-        <main className='px-4'>
+        <main className='px-8'>
           {children}
         </main>
+        <SectionScroller/>
       </body>
     </html>
   )
