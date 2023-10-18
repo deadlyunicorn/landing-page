@@ -1,4 +1,4 @@
-import { UsefulLinks } from "../about/UsefulLinks";
+import { UsefulLinks } from "./UsefulLinks";
 import { SectionHeader } from "../lib/SectionHeader";
 import { PageSection } from "../lib/SectionOutline";
 
