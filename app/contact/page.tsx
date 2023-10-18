@@ -22,7 +22,7 @@ const ContactSection = () => (
         <br/> 
         <a 
           tabIndex={0}
-          className="hover:underline focus:underline"
+          className="hover:underline focus:underline outline-none"
           href="mailto:retroalex1008@gmail.com"> retroalex1008@gmail.com
         </a>. <br/>
         I will be available for job offers after the end of June 2024.
