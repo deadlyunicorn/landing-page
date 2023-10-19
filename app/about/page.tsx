@@ -1,6 +1,7 @@
 import { SectionHeader } from "../lib/SectionHeader";
 import { PageSection } from "../lib/SectionOutline";
-import { mongoClient } from "../api/mongodb/mongoClient";
+import mongoClient from "../api/mongodb/mongoClient";
+import { WordCloud } from "./WordCloud";
 
 const AboutSection = async() => {
 
@@ -10,6 +11,7 @@ const AboutSection = async() => {
   <PageSection
     id="about_section">
 
+      <WordCloud/>
       <SectionHeader>
         <h1> About Me </h1>
       </SectionHeader>
