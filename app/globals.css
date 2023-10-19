@@ -39,3 +39,44 @@
     filter: brightness(50%);
   }
 }
+
+.animationAppear{
+  animation: appearance 2s;
+}
+
+@keyframes appearance {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+.darkModeSwitchSlideRight{
+  animation: slideRight 0.2s;
+  left: 50%
+
+}
+.darkModeSwitchSlideLeft{
+  animation: slideLeft 0.2s;
+  left: 0%
+}
+
+@keyframes slideRight {
+  0%{
+    left: 25%
+  }
+  100%{
+    left: 50%
+  }
+}
+@keyframes slideLeft {
+  0%{
+    left: 25%
+  }
+  100%{
+    left: 0%
+  }
+}
+
