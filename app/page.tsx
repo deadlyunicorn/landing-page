@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ToCItem } from "./lib/ToCItem";
 import { PageSection } from "./lib/SectionOutline";
 import { SectionHeader } from "./lib/SectionHeader";
+import deadlyunicorn from '@/public/deadlyunicorn.png'
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       id="table_of_contents">
       <SectionHeader>
           <div className="relative overflow-visible">
-            <h1 className="text-4xl md:text-7xl">deadlyunicorn.</h1>
+            <h1 className="text-4xl md:text-7xl text-slate-700 dark:text-inherit">deadlyunicorn.</h1>
             <h1 className="text-4xl md:text-7xl blur-[2px] absolute top-0">deadlyunicorn.</h1>
           </div>
           
@@ -40,12 +41,12 @@ const Home = () => {
       <div className="place-self-end h-[32vh]">
       <Image
         className="
+          w-24 h-auto
           scale-x-[-1]
           opacity-30  mb-4 
           absolute left-4 bottom-0"
-        src={"/deadlyunicorn.png"}
-        width={100}
-        height={100}
+        src={deadlyunicorn}
+        priority={ false }
         alt="deadlyunicorn's online presence visualization"/>    
       </div>    
     </PageSection>

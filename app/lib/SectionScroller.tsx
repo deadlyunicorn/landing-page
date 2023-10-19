@@ -44,7 +44,9 @@ export const SectionScroller = () => {
           )
   
           if ( newSection !== currentSection ){
-            router.replace( newSection );
+            router.replace( newSection, {
+              scroll: false
+            } );
           }
   
           setTimeout( ()=> {
@@ -53,9 +55,12 @@ export const SectionScroller = () => {
         }
   }
 
+  const notPortfolioPreview = sections.includes( currentSection );
+
+
   useEffect( ()=>{
 
-    if ( hasMounted ){
+    if ( hasMounted && notPortfolioPreview ){
 
       onwheel = ( wheelEvent ) => {
         handlePageChange( wheelEvent.deltaY < 0 ); 
@@ -90,6 +95,8 @@ export const SectionScroller = () => {
 
   return ( 
     <>
+    { notPortfolioPreview &&
+    
     <aside className="fixed right-2 top-[40vh]">
       <ul className="flex flex-col gap-y-2">
         {
@@ -103,16 +110,21 @@ export const SectionScroller = () => {
                 <li  
                   data-current-section={ `${section}` == currentSection }
                   className="
-                  bg-slate-200 
+                  dark:bg-slate-200 bg-slate-950
+                  dark:border-slate-200 border-slate-950
                   group-focus:bg-amber-600
-                  group-hover:bg-blue-600
-                    data-[current-section=true]:bg-amber-400
-                    rounded-full w-2 h-2 border border-slate-200"/>
+                  dark:group-focus:bg-amber-800
+                  dark:group-hover:bg-blue-600
+                  group-hover:bg-blue-400
+                  data-[current-section=true]:bg-amber-400
+                  dark:data-[current-section=true]:bg-amber-600
+                    rounded-full w-2 h-2 border "/>
               </Link>
             ))
         }
       </ul>
     </aside>
+    }
     
     <aside 
     className="
@@ -141,9 +153,9 @@ export const SectionScroller = () => {
       <Link
         tabIndex={0} 
         className="group outline-none overflow-visible relative"
-        href={ nextSection }>
-        <BlurSpan> Homepage </BlurSpan>
-        Homepage
+        href={ '/portfolio' }>
+        <BlurSpan> Back </BlurSpan>
+        Back
       </Link>
       </div>
       :
@@ -160,6 +172,3 @@ export const SectionScroller = () => {
     </>
   )
 }
-
-const delay = async( ms: number ) => new Promise ( res => { setTimeout( res, ms)});
-

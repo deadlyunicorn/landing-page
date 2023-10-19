@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export const SectionHeader = ( { children }: { children: ReactNode } ) => (
   <header 
     className="
-      relative border
+      relative
       text-4xl md:text-7xl
       max-w-4xl place-self-center w-full
       max-h-[20vh] h-full 
