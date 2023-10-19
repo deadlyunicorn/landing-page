@@ -1,13 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { SectionScroller } from './lib/SectionScroller'
+import { DarkMode } from './lib/DarkMode'
 
 export const metadata: Metadata = {
-  title: 'deadlyunicorn - Web developer',
+  title: 'deadlyunicorn - A Web developer',
   description: 
     'Welcome to my landing page! \
     I am deadlyunicorn a Web developer, \
-    mainly working with React.',
+    mainly working with React - NextJS.',
 }
 
 export default function RootLayout({
@@ -18,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=' 
-        text-slate-200 w-[100vw]
+        dark:text-slate-200 w-[100vw]
         bg-gradient-to-b overflow-hidden
-        from-slate-950 to-black from-85%'>
+        text-slate-950
+        from-slate-200 to-slate-300
+        dark:from-slate-950 dark:to-black from-85%'>
+        <DarkMode/>
+
         <main className='px-8'>
           {children}
         </main>

@@ -5,8 +5,7 @@ export const ToCItem = ( { children } : { children : ReactNode} ) => (
   <li 
     className="
       relative font-light
-      hover:text-white
-      text-3xl md:text-5xl
+    text-3xl md:text-5xl
       w-fit">
     <span className="absolute hover:blur-[2px] group-focus:blur-[2px]">
       {children}

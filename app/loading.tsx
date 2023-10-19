@@ -5,7 +5,8 @@ const LoadingPage = () => {
       className="
         flex flex-col items-center justify-center
         fixed left-0 top-0 bg-gradient-to-b overflow-hidden
-        from-slate-950 to-black from-85%
+        from-slate-200 to-slate-300
+        dark:from-slate-950 dark:to-black from-85%
         w-[100vw] h-[100vh] backdrop-blur-md"
       aria-label="loading page">
 
@@ -19,7 +20,9 @@ const LoadingPage = () => {
             w-full h-1 mx-4 rounded-full overflow-hidden relative">
             <div className="
             loading_bar w-10 h-1
-            bg-slate-200 absolute rounded-full"/>
+            dark:bg-slate-200 
+            bg-slate-900
+            absolute rounded-full"/>
              
           </div>
          
