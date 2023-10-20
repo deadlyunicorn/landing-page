@@ -13,7 +13,8 @@
     "mongodb": "^6.1.0",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass": "^1.69.4"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
