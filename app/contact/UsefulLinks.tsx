@@ -20,14 +20,20 @@ const UsefulLinkItem = ( { href, children }: { href: string, children: ReactNode
       className="peer outline-none"
       tabIndex={0} 
       href={ href }>
+    
+      <div className="
+      h-[1px] group-hover:animation-ToCHover
+      absolute bg-slate-950 dark:bg-slate-200 bottom-0 left-0"/>
+
       { children }
     </Link>
     <span className="
-      -z-10
+      -z-10 
       left-0 absolute 
       peer-focus:blur-[2px]
       group-hover:blur-[2px] group-focus:blur-[2px]">
       {children}
+
     </span>
   </li>
 )

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react"
 import { BlurSpan } from "./BlurSpan";
+import "@/app/lib/animations2.scss"
 
 
 export const SectionScroller = () => {
@@ -97,8 +98,8 @@ export const SectionScroller = () => {
     <>
     { notPortfolioPreview &&
     
-    <aside className="fixed right-2 top-[40vh]">
-      <ul className="flex flex-col gap-y-2">
+    <aside className="fixed right-2 top-[40vh] overflow-visible">
+      <ul className="flex flex-col gap-y-2 animation-sectionScroller overflow-visible">
         {
           sections.map( ( section, key ) => (
               <Link
@@ -128,6 +129,7 @@ export const SectionScroller = () => {
     
     <aside 
     className="
+      animation-arrow
       fixed
       bottom-0 
       flex w-full 

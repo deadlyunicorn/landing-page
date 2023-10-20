@@ -1,0 +1,60 @@
+.group:hover .group-hover\:animation-ToCHover{ 
+
+  animation: tocHover 1s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+@keyframes tocHover {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.animation-smoothBlur {
+ animation: smoothBlur 2s;
+ animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+ filter: blur(2px);
+}
+
+@keyframes smoothBlur{
+  0%{
+    filter: blur(0px);
+  }
+  100%{
+    filter: blur(2px);
+  }
+}
+
+.animation-header .animatable{
+  animation: slowEntryFromLeft 2s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.animation-webDeveloperHeader{
+  animation: slowEntryFromLeft 3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+
+}
+
+@keyframes  slowEntryFromLeft{
+  0%{
+    opacity: 0%;
+  }
+  33%{
+    transform: translateX(-40px);
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}

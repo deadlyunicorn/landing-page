@@ -19,6 +19,8 @@ export const Showcase = async()=> {
     }
   const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
   
+  // const showcaseItem  = await showcaseItems.findOne({}) as unknown as showcaseItem | null;
+  // const showcaseItems = mongoClient.db('landing-page').collection('showcase-items');
 
   return (
     

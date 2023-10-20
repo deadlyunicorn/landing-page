@@ -7,9 +7,25 @@ import { DescriptionModal } from "./DescriptionModal";
 
 const ShowcaseDisplay = async() => {
 
-  const showcaseItems = mongoClient.db('landing-page').collection('showcase-items');
-  const showcaseItem  = await showcaseItems.findOne({}) as unknown as showcaseItem | null;
+  // const showcaseItems = mongoClient.db('landing-page').collection('showcase-items');
+  // const showcaseItem  = await showcaseItems.findOne({}) as unknown as showcaseItem | null;
 
+
+  const showcaseItem:showcaseItem =
+    {
+      title: "CoolItem",
+      thumbnail: "/deadlyunicorn.png",
+      shortDescription: "A mock social app",
+      fullDescription: "This is a mock social app. You can add friends etc1, etc2, etc3",
+      images: [
+        "/deadlyunicorn.png",
+        "/deadlyunicorn.png",
+        "/deadlyunicorn.png",
+        "/deadlyunicorn.png",
+      ]
+    }
+  const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
+  
 
   return (
     

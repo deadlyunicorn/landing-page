@@ -55,7 +55,11 @@ export const DescriptionModal = ( { fullDescription }: { fullDescription: string
         max-w-lg rounded-md"
         id="portfolio_item_dialog">
         <h3 className="text-3xl text-center md:text-5xl">Full Description</h3>
-        <p className="text-lg text-center md:text-2xl">{ fullDescription }</p>
+        <p
+          dangerouslySetInnerHTML={
+            { __html: fullDescription }
+          } 
+          className="text-lg text-center md:text-2xl"/>
         <div className="group relative w-fit place-self-center my-2 overflow-visible text-2xl md:text-3xl">
           <button
             className="peer outline-none"

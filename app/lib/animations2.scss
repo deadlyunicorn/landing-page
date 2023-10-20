@@ -1,0 +1,119 @@
+
+
+@for $i from 0 through 4 { 
+  .animation-sectionScroller a:nth-child( #{$i}n ){
+    animation: sectionScroller #{$i*3}s;
+    opacity: 100%;
+  }
+}
+
+@keyframes sectionScroller {
+  0%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 0%;
+    transform: translateX(-20px);
+  }
+  25%{
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+@for $i from 0 through 3{
+  .animation-ToCEntry a:nth-child( #{$i * 2 - 1} ){
+      animation: ToCEntryFromLeft #{$i}s;
+  }
+}
+
+.animation-ToCEntry a:nth-child( 2 ){
+  animation: ToCEntryFromRight 1s;
+}
+
+@keyframes ToCEntryFromLeft {
+  0%{
+    opacity: 0%;
+    transform: translateX(-40px);
+  }
+  40%{
+    opacity: 0%;
+  }
+  60%{
+    opacity: 50%;
+  }
+  100%{
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ToCEntryFromRight {
+  0%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 0%;
+    transform: translateX(40px);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+.animation-deadlyunicorn{
+  animation: unicornIn 3s;
+}
+
+@keyframes unicornIn {
+  0%{
+    opacity: 0%;
+    transform: rotateZ( -45deg ) scaleX(-1) translateX(40px);
+  }
+  100%{
+    opacity: 30%;
+  }
+}
+
+.animation-arrow a,button{
+  animation: arrowIn 1s;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+@keyframes arrowIn {
+  0%{
+    opacity: 0%;
+    transform: scale( 0 );
+  }
+  100%{
+    transform: scale( 1 );
+  }    
+}
+
+.animation-description{
+  animation: description 2s;
+  background-clip: text;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+@keyframes description {
+  0% {
+    transform: scaleX( -1 );
+    opacity: 0%;
+    background-position-x: -500px;
+  }
+  100% {
+  }
+}
+
+.animation-bounce{
+  animation: bounce;
+}
+
+@keyframes bounce {
+  0%,100%{}
+  50%{
+    scale: 0.1;
+  }
+}

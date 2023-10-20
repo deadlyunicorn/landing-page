@@ -4,26 +4,41 @@ import { ToCItem } from "./lib/ToCItem";
 import { PageSection } from "./lib/SectionOutline";
 import { SectionHeader } from "./lib/SectionHeader";
 import deadlyunicorn from '@/public/deadlyunicorn.png'
+import "@/app/lib/animations.css"
+import "@/app/lib/animations2.scss"
 
 const Home = () => {
   return (
     <PageSection
       id="table_of_contents">
       <SectionHeader>
-          <div className="relative overflow-visible">
-            <h1 className="text-4xl md:text-7xl text-slate-700 dark:text-inherit">deadlyunicorn.</h1>
-            <h1 className="text-4xl md:text-7xl blur-[2px] absolute top-0">deadlyunicorn.</h1>
+          <div className="overflow-visible">
+            <div className="relative overflow-visible">
+              <h1 className="text-4xl md:text-7xl invisible">deadlyunicorn.</h1>
+              <h1 className="animatable text-4xl md:text-7xl text-slate-700 dark:text-inherit">deadlyunicorn.</h1>
+              <h1 className="animatable text-4xl md:text-7xl blur-[2px] absolute top-0">deadlyunicorn.</h1>
+            </div>
+            
+            <div className="relative -ml-[30%] overflow-visible">
+              <h2 className="text-2xl font-extralight
+                invisible
+                place-self-center justify-self-end ">
+                  A Web Developer
+                </h2>
+              <h2 className="
+                text-2xl font-extralight
+                place-self-center justify-self-end
+                animation-invisible-1s
+                animation-webDeveloperHeader">
+                A Web Developer
+              </h2>
+            </div>
           </div>
-          
-          <h2 className="
-            text-2xl font-extralight
-            place-self-center justify-self-end
-            -ml-[30%]">
-            A Web developer
-          </h2>
       </SectionHeader>
 
-      <ul className="flex flex-col gap-y-4 md:gap-y-12 items-center overflow-visible">
+      <ul className="
+        animation-ToCEntry
+        flex flex-col gap-y-4 md:gap-y-12 items-center overflow-visible">
         <Link 
           className="group outline-none"
           tabIndex={0}      
@@ -40,7 +55,10 @@ const Home = () => {
 
       <div className="place-self-end h-[32vh]">
       <Image
+        width={96}
+        height={100}
         className="
+          animation-deadlyunicorn
           w-24 h-auto
           scale-x-[-1]
           opacity-30  mb-4 
