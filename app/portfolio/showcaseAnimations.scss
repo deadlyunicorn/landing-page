@@ -1,0 +1,85 @@
+
+
+@for $i from 0 through 4 {
+  .animation-item-entry li:nth-child( #{$i} ){
+    animation: itemEntry #{ 1 + $i  }s;
+  }
+
+}
+
+@keyframes itemEntry {
+  0%{
+    scale: 0;
+    opacity: 0;
+  }
+  40%{
+    scale: 0;
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+}
+
+.animation-showcase-image-appearance{
+  animation: showcase-image-appearance 2s;
+}
+
+@keyframes showcase-image-appearance {
+  0%{
+    transform: scale(0) translateX(-100%) rotateZ( -20deg );
+    opacity: 0;
+  }
+  10%{
+    transform: scale(0) translateX(-100%) rotateZ( -20deg );
+  }
+  100%{}
+}
+
+.animation-about-item{
+  animation: about-item 3s;
+}
+
+@keyframes about-item {
+  0%{
+    opacity: 0;
+    transform: translateY( 10vh );
+  }
+  40%{
+    opacity: 0;
+    transform: translateY( 10vh );
+  }
+}
+
+
+.animation-short-description{
+  animation: short-description 4s;
+}
+
+@keyframes short-description {
+  0%{
+    opacity: 0;
+    transform: translateY( 10vh );
+  }
+  40%{
+    opacity: 0;
+    transform: translateY( 10vh );
+  }
+}
+
+
+
+.animation-learn-more{
+  animation: learn-more 4s;
+}
+
+@keyframes learn-more {
+  0%{
+    opacity: 0;
+    scale: 0;
+  }
+  70%{
+    opacity: 0;
+    scale: 0;
+  }
+}

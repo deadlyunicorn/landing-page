@@ -17,12 +17,14 @@ const UsefulLinkItem = ( { href, children }: { href: string, children: ReactNode
     className="relative group overflow-visible text-lg md:text-2xl">
     <Link 
       target="_blank"
-      className="peer outline-none"
+      className="peer outline-none group"
       tabIndex={0} 
       href={ href }>
     
       <div className="
-      h-[1px] group-hover:animation-ToCHover
+      h-[1px] 
+      group-hover:animation-ToCHover
+      group-focus:animation-ToCHover
       absolute bg-slate-950 dark:bg-slate-200 bottom-0 left-0"/>
 
       { children }

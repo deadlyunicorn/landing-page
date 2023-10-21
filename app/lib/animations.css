@@ -5,6 +5,18 @@
   width: 100%;
 }
 
+.peer:focus ~ .peer-focus\:animation-ToCHover{ 
+  animation: tocHover 1s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.group:focus .group-focus\:animation-ToCHover{ 
+  animation: tocHover 1s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
 @keyframes tocHover {
   0%{
     width: 0%;

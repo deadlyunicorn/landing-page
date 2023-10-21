@@ -3,6 +3,7 @@ import { ImageWrapForModal } from "@/app/lib/ImageComponentWithModal";
 import { SelectionButtonWrapper } from "@/app/lib/SelectionButtonWrapper";
 import Image from "next/image"
 import {  useState } from "react"
+import "@/app/portfolio/showcaseAnimations.scss"
 
 export const ImageScroller = ( { images }: { images: string[] } ) => {
 
@@ -30,9 +31,9 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
         </SelectionButtonWrapper>
       </div>
 
-        <li className="w-[80%] h-full list-none flex flex-col items-center justify-center">
+        <li className="w-[80%] h-full list-none flex flex-col items-center justify-center overflow-visible">
           
-          <div className="w-full h-[90%]">
+          <div className="w-full h-[90%] animation-showcase-image-appearance">
             <ImageWrapForModal imageURL={ images[ currentIndex ] }>
               <Image
                 className="object-contain w-full h-full"
@@ -43,7 +44,7 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
             </ImageWrapForModal>
           </div>
 
-          <p className="h-[10%]">{ currentIndex + 1 } / { imageLength }</p>
+          <p className="h-[10%] animation-description">{ currentIndex + 1 } / { imageLength }</p>
         
         </li>
         <div className="w-[10%] flex items-center">

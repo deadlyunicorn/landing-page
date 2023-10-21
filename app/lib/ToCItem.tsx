@@ -11,8 +11,10 @@ export const ToCItem = ( { children } : { children : ReactNode} ) => (
       text-3xl md:text-5xl
       w-fit">
     <div className="
-      h-[1px] group-hover:animation-ToCHover
-      absolute bg-black bottom-0"/>
+      group-focus:animation-ToCHover
+      group-hover:animation-ToCHover
+      h-[1px] dark:bg-slate-200
+      absolute bg-slate-950 bottom-0"/>
     <BlurSpan>
       {children}  
     </BlurSpan>

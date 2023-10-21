@@ -24,7 +24,6 @@ const ShowcaseDisplay = async() => {
         "/deadlyunicorn.png",
       ]
     }
-  const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
   
 
   return (
@@ -34,16 +33,17 @@ const ShowcaseDisplay = async() => {
           <PageSection
             id= { showcaseItem.title }>
             <SectionHeader>
-              { showcaseItem.title }
+              <h1 className="invisible"> { showcaseItem.title } </h1>
+              <h1 className="animatable"> { showcaseItem.title } </h1>
             </SectionHeader>
             <section className="
             h-full 
             mb-[10vh] max-w-4xl
             place-self-center w-full
             flex flex-col gap-y-4">
-              <h3 className="text-2xl md:text-5xl text-center"> About </h3>
-              <div className="flex justify-center items-center">
-                <p className="text-lg md:text-3xl text-center">
+              <h3 className="text-2xl md:text-5xl text-center animation-about-item"> About </h3>
+              <div className="flex justify-center items-center overflow-visible">
+                <p className="text-lg md:text-3xl text-center animation-short-description">
                   { showcaseItem.shortDescription }
                 </p>&nbsp;
                 <DescriptionModal fullDescription={ showcaseItem.fullDescription }/>
@@ -62,7 +62,7 @@ const ShowcaseDisplay = async() => {
               flex h-full 
               items-center justify-center 
               text-lg md:text-5xl">
-              <p> Showcase item not found. </p>
+              <p className="animation-description"> Showcase item not found. </p>
             </div>
           </PageSection>
 

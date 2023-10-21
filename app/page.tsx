@@ -19,7 +19,7 @@ const Home = () => {
               <h1 className="animatable text-4xl md:text-7xl blur-[2px] absolute top-0">deadlyunicorn.</h1>
             </div>
             
-            <div className="relative -ml-[30%] overflow-visible">
+            <div className="relative overflow-visible">
               <h2 className="text-2xl font-extralight
                 invisible
                 place-self-center justify-self-end ">

@@ -23,20 +23,25 @@ export const ImageWrapForModal = ( { imageURL, children }: {
 
   return (
     <>
-      <div className="h-full w-full group relative">
+      <div 
+        tabIndex={ 0 } 
+        className="h-full w-full group relative outline-none">
         {children}
         <button 
           onClick={ ()=> { setViewImage( true ) } }
           className="
+            outline-none group
+            focus:underline
+            group-focus:flex
+            group-focus-within:flex
             group-hover:flex hidden
             items-center justify-center
             left-0 bottom-0 
             bg-slate-200 bg-opacity-60
             dark:bg-slate-950 dark:bg-opacity-60 backdrop-blur-sm
-            absolute 
+            absolute animate-none
             h-full w-full">
             <div className="flex relative">
-
             <BlurSpan>View</BlurSpan>
             View
           </div>
@@ -58,6 +63,7 @@ export const ImageWrapForModal = ( { imageURL, children }: {
             className="w-full h-full absolute cursor-crosshair"/>
 
           <div className="absolute
+            animation-modal-appearance
             items-center justify-center  
             flex flex-col
             h-[80vh] w-[90vw]">

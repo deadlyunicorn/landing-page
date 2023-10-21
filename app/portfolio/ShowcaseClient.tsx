@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BlurSpan } from "../lib/BlurSpan";
 import { SelectionButtonWrapper } from "../lib/SelectionButtonWrapper";
+import "@/app/portfolio/showcaseAnimations.scss"
 
 export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem[] } ) => {
 
@@ -28,7 +29,9 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
 
 
   return (
-    <section className="h-full mb-[10vh] flex w-full">
+    <section className="h-full mb-[10vh] flex w-full 
+    animation-item-entry
+    ">
       
       <div className="w-[10%] items-center flex">
       <SelectionButtonWrapper>
@@ -44,7 +47,10 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
       </SelectionButtonWrapper>
       </div>
 
-      <ul className="h-full w-[80%] flex flex-col justify-between md:hidden">
+      <ul className="
+        h-full w-[80%] 
+        flex flex-col 
+        justify-between md:hidden ">
         { currentItem1Small && <ShowcaseItem item={ currentItem1Small }/> }
         { currentItem2Small && <ShowcaseItem item={ currentItem2Small }/> }
       </ul>

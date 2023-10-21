@@ -1,0 +1,51 @@
+.animation-slide-from-right{
+  animation: slide-from-right 2s;
+}
+
+@keyframes slide-from-right {
+
+  0%{
+    opacity: 0;
+    transform: translateX( +20vw );
+  }
+  50%{
+    opacity: 0;
+    transform: translateX( +20vw );
+  }
+  
+}
+
+.animation-slide-from-left{
+  animation: slide-from-left 3s;
+}
+
+@keyframes slide-from-left {
+
+  0%{
+    opacity: 0;
+    transform: translateX( -20vw );
+  }
+  50%{
+    opacity: 0;
+    transform: translateX( -20vw );
+  }
+  
+}
+
+.animation-slide-from-down{
+  animation: slide-from-down 3s;
+}
+
+
+@keyframes slide-from-down {
+
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  75%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+}
