@@ -70,3 +70,33 @@
     opacity: 100%;
   }
 }
+
+.animation-page-section-down{
+  animation: page-section-down 2s;
+}
+
+
+
+@keyframes page-section-down {
+  100%{
+    transform: translateX( -80vw );
+    opacity: 0;
+  }  
+}
+
+.animation-page-section-up{
+  animation: page-section-up 20s;
+}
+
+
+
+@keyframes page-section-up {
+  10%{
+    transform: translateX( 80vw );
+    opacity: 0;
+  }
+  100%{
+    transform: translateX( 80vw );
+    opacity: 0;
+  }  
+}

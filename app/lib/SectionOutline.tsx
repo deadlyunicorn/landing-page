@@ -4,6 +4,7 @@ export const PageSection = ( { id, children }: { id: string, children: ReactNode
     <section
       id={id}
       className="
+        page-section
         h-[100vh] gap-y-[10vh] w-full
         flex flex-col justify-start">
       { children }

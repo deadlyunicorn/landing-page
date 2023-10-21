@@ -43,11 +43,23 @@ export const SectionScroller = () => {
               ? currentIndex + 1
               : currentIndex ]}`
           )
+
+          const pageSectionElement = document.querySelector('.page-section');
   
           if ( newSection !== currentSection ){
-            router.replace( newSection, {
-              scroll: false
-            } );
+            
+            pageSectionElement &&
+              ( nextPageRequest
+                ? pageSectionElement.classList.add('animation-page-section-up') 
+                : pageSectionElement.classList.add('animation-page-section-down')
+              )
+
+            setTimeout( ()=>{
+              router.replace( newSection, {
+                scroll: false
+              } );
+            }, 400 )
+            
           }
   
           setTimeout( ()=> {
