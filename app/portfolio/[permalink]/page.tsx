@@ -5,25 +5,29 @@ import { showcaseItem } from "@/app/types/showcaseItem";
 import { ImageScroller } from "./ImageScroller";
 import { DescriptionModal } from "./DescriptionModal";
 
-const ShowcaseDisplay = async() => {
+const ShowcaseDisplay = async( { params }: { 
+  params:{
+    permalink: string
+  }
+}) => {
+  
+  const showcaseItems = mongoClient.db('landing_page').collection('showcase_items');
+  const showcaseItem  = await showcaseItems.findOne( { permalink: params.permalink } ) as unknown as showcaseItem | null;
 
-  // const showcaseItems = mongoClient.db('landing-page').collection('showcase-items');
-  // const showcaseItem  = await showcaseItems.findOne({}) as unknown as showcaseItem | null;
 
-
-  const showcaseItem:showcaseItem =
-    {
-      title: "CoolItem",
-      thumbnail: "/deadlyunicorn.png",
-      shortDescription: "A mock social app",
-      fullDescription: "This is a mock social app. You can add friends etc1, etc2, etc3",
-      images: [
-        "/deadlyunicorn.png",
-        "/deadlyunicorn.png",
-        "/deadlyunicorn.png",
-        "/deadlyunicorn.png",
-      ]
-    }
+  // const showcaseItem:showcaseItem =
+  //   {
+  //     title: "CoolItem",
+  //     thumbnail: "/deadlyunicorn.png",
+  //     shortDescription: "A mock social app",
+  //     fullDescription: "This is a mock social app. You can add friends etc1, etc2, etc3",
+  //     images: [
+  //       "/deadlyunicorn.png",
+  //       "/deadlyunicorn.png",
+  //       "/deadlyunicorn.png",
+  //       "/deadlyunicorn.png",
+  //     ]
+  //   }
   
 
   return (
