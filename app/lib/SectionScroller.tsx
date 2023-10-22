@@ -46,7 +46,7 @@ export const SectionScroller = () => {
 
           const pageSectionElement = document.querySelector('.page-section');
   
-          if ( newSection !== currentSection ){
+          if ( window && sections.includes ( window.location.pathname ) && newSection !== currentSection ){
             
             pageSectionElement &&
               ( nextPageRequest
