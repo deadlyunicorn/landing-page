@@ -69,8 +69,8 @@ export const ImageWrapForModal = ( { imageURL, children }: {
             h-[80vh] w-[90vw]">
             <Image
               className="object-contain"
-              width=  { 900 }
-              height= { 900 }
+              width=  { 1920 }
+              height= { 1080 }
               src={ imageURL } 
               alt="Fullscreen view of the image"/>
 
