@@ -8,6 +8,9 @@
   overflow: hidden;
 }
 
+h1,h2,h3,p{
+  overflow: visible;
+}
 
 .loading_bar{
   animation: loadingAnimation;
