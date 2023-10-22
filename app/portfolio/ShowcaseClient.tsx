@@ -15,10 +15,11 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
   const currentItem1Small = showcaseItems[ showcaseIndex * 2 ];
   const currentItem2Small = showcaseItems[ showcaseIndex * 2 + 1 ];
 
+
   const currentItem1Medium = showcaseItems[ showcaseIndex * 4 ];
   const currentItem2Medium = showcaseItems[ showcaseIndex * 4 + 1 ];
-  const currentItem3Medium = showcaseItems[ showcaseIndex * 4 * 2 ];
-  const currentItem4Medium = showcaseItems[ showcaseIndex * 4 * 2 + 1 ];
+  const currentItem3Medium = showcaseItems[ showcaseIndex * 4 + 2 ];
+  const currentItem4Medium = showcaseItems[ showcaseIndex * 4 + 3 ];
 
   useEffect( ()=> {
     onresize = () => {
@@ -33,12 +34,25 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
     animation-item-entry
     ">
       
-      <div className="w-[10%] items-center flex">
+      <div className="w-[10%] items-center flex md:hidden">
       <SelectionButtonWrapper>
         { showcaseIndex > 0 && 
           <button 
             className="peer outline-none"
             onClick={()=>{ setShowcaseIndex( showcaseIndex - 1 )}}>
+            &lt;
+
+          </button>
+        }
+          <BlurSpan> &lt; </BlurSpan>
+      </SelectionButtonWrapper>
+      </div>
+      <div className="w-[10%] items-center md:flex hidden">
+      <SelectionButtonWrapper>
+        { showcaseIndex > 0 && 
+          <button 
+            className="peer outline-none"
+            onClick={()=>{ setShowcaseIndex( showcaseIndex - 4 )}}>
             &lt;
 
           </button>
@@ -70,7 +84,7 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
   
       <div className="w-[10%] md:hidden flex items-center">
         <SelectionButtonWrapper>
-          { showcaseIndex * 2 + 1 < showcaseItemsLength  && 
+          { ( showcaseIndex + 1 ) * 2 < showcaseItemsLength  && 
           <button 
             className="peer outline-none"
             onClick={
@@ -85,11 +99,11 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
 
       <div className="w-[10%] md:flex hidden items-center">
         <SelectionButtonWrapper>
-          { showcaseIndex * 4 + 1 < showcaseItemsLength  && 
+          { ( showcaseIndex + 1 ) * 4  < showcaseItemsLength  && 
           <button 
             className="peer outline-none"
             onClick={
-            ()=>{ setShowcaseIndex( showcaseIndex + 1 )}}>
+            ()=>{ setShowcaseIndex( showcaseIndex + 4 )}}>
             &gt;
           </button>
           }
@@ -111,27 +125,32 @@ const ShowcaseItem = ( { item }: { item: showcaseItem }) => (
   w-full
   rounded-md h-[45%]">
   <Link
-    className="hover:brightness-125 focus:brightness-125"
+    className="hover:brightness-110 focus:brightness-110"
     tabIndex={0}
-    href={`/portfolio/${item.title}`}>
+    href={`/portfolio/${item.permalink}`}>
     <Image
       alt={`thumbnail of ${item.title}`}
-      width={200}
-      height={200}
+      width={400}
+      height={600}
       className="
         bg-slate-300 bg-opacity-60
         dark:bg-slate-900 dark:bg-opacity-60
         rounded-md
-        object-contain h-[60%] w-full" 
+        object-contain h-[80px] md:h-[120px] w-full" 
       src={item.thumbnail}/>
       <div className="
         bg-slate-300 bg-opacity-30
         dark:bg-slate-900 dark:bg-opacity-30
-        w-full flex flex-col h-[40%] ">
+        w-full flex flex-col justify-around h-[40%] ">
         <p className="text-lg text-center flex justify-center">{ item.title }</p>
-        <p className="w-full flex flex-col items-center justify-center">
-          { item.shortDescription }
-        </p>
+        
+        <div className="
+          items-center justify-center
+          flex flex-col">
+          <p className="text-center">
+            { item.shortDescription }
+          </p>
+        </div>
       </div>
 
   </Link>
