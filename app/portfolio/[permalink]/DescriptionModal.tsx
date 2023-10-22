@@ -38,9 +38,10 @@ export const DescriptionModal = ( { fullDescription }: { fullDescription: string
         onClick={()=>{
           setShowModal( false );
         }} 
-        className="w-full h-full absolute cursor-crosshair"/>
+        className="w-full h-full absolute cursor-crosshair "/>
       <section
         className="
+        max-h-[90vh]
         w-full animation-modal-appearance
         border-t
         border-r
@@ -55,12 +56,12 @@ export const DescriptionModal = ( { fullDescription }: { fullDescription: string
         dark:bg-opacity-70
         max-w-lg rounded-md"
         id="portfolio_item_dialog">
-        <h3 className="text-3xl text-center md:text-5xl">Full Description</h3>
-        <p
+        <h3 className="text-3xl text-center md:text-5xl min-h-[5vh]">Full Description</h3>
+        <div
           dangerouslySetInnerHTML={
             { __html: fullDescription }
           } 
-          className="text-lg text-center md:text-2xl"/>
+          className="text-lg md:text-2xl overflow-y-auto px-2"/>
         <div className="group relative w-fit place-self-center my-2 overflow-visible text-2xl md:text-3xl">
           <button
             className="peer outline-none"

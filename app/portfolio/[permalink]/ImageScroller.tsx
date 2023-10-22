@@ -38,8 +38,8 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
               <Image
                 className="object-contain w-full h-full"
                 src={ images[currentIndex] }
-                height={200}
-                width={200}
+                height={1920}
+                width={1080}
                 alt={`No.${currentIndex} image of this project's showcase`}/>
             </ImageWrapForModal>
           </div>
