@@ -16,7 +16,9 @@ export const ShowcaseFallback = ( ) => {
         "/deadlyunicorn.png",
         "/deadlyunicorn.png",
         "/deadlyunicorn.png",
-      ]
+      ],
+      date_of_creation: new Date(),
+      permalink: "none"
     }
   const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem );
   

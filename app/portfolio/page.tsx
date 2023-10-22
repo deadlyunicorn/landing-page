@@ -4,7 +4,7 @@ import { PageSection } from "../lib/SectionOutline";
 import { Showcase } from "./Showcase";
 import { ShowcaseFallback } from "./Fallbacks";
 
-export const PortfolioSection = () => (
+const PortfolioSection = () => (
 
   <PageSection
       id="portfolio_section">
