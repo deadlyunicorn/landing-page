@@ -52,7 +52,7 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
         { showcaseIndex > 0 && 
           <button 
             className="peer outline-none"
-            onClick={()=>{ setShowcaseIndex( showcaseIndex - 4 )}}>
+            onClick={()=>{ setShowcaseIndex( showcaseIndex - 1 )}}>
             &lt;
 
           </button>
@@ -103,7 +103,8 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
           <button 
             className="peer outline-none"
             onClick={
-            ()=>{ setShowcaseIndex( showcaseIndex + 4 )}}>
+            ()=>{ 
+              setShowcaseIndex( showcaseIndex + 1 )}}>
             &gt;
           </button>
           }

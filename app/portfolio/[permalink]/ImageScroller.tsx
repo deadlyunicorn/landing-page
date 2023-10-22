@@ -40,7 +40,7 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
                 src={ images[currentIndex] }
                 height={1920}
                 width={1080}
-                alt={`No.${currentIndex} image of this project's showcase`}/>
+                alt={`No.${currentIndex+1} image of this project's showcase`}/>
             </ImageWrapForModal>
           </div>
 

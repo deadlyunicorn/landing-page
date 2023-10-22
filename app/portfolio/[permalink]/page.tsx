@@ -54,8 +54,9 @@ const ShowcaseDisplay = async( { params }: {
               </div>
 
               
-
-              <ImageScroller images={ showcaseItem.images }/>
+              { showcaseItem.images.length > 0 
+                &&<ImageScroller images={ showcaseItem.images }/>
+              }
             </section>
           </PageSection>
 
