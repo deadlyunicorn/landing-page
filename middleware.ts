@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const middleware = async( request: NextRequest ) => {
 
 
-  switch ( request.nextUrl.pathname ){
+  switch ( request.nextUrl.pathname.toLowerCase() ){
 
     case "/github":
       return NextResponse.redirect('https://github.com/deadlyunicorn');
@@ -14,6 +14,7 @@ const middleware = async( request: NextRequest ) => {
     case "/links":
       return NextResponse.redirect('https://linktr.ee/deadlyunicorn');
     case "/resume":
+    case "/cv":
       return NextResponse.redirect('https://cv-job-resume.vercel.app');
 
 
