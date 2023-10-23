@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     mainly working with React - NextJS.',
 }
 
+export const revalidate = 60 * 60;
+
 export default function RootLayout({
   children,
 }: {
