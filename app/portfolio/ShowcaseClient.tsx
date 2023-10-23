@@ -137,7 +137,7 @@ const ShowcaseItem = ( { item }: { item: showcaseItem }) => (
         bg-slate-300 bg-opacity-60
         dark:bg-slate-900 dark:bg-opacity-60
         rounded-md
-        object-contain h-[80px] md:h-[120px] w-full" 
+        object-contain h-[min(80px,60%)] md:h-[min(120px,60%)] w-full" 
       src={item.thumbnail}/>
       <div className="
         bg-slate-300 bg-opacity-30
