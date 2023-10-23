@@ -84,3 +84,10 @@ h1,h2,h3,p{
   }
 }
 
+#portfolio_item_dialog a{
+  color: rgb(37 99 235);
+}
+#portfolio_item_dialog a:hover{
+  text-decoration: underline;
+}
+
