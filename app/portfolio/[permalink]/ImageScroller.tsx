@@ -10,6 +10,18 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
 
   const [ currentIndex, setCurrentIndex ] = useState( 0 );
   const imageLength = images.length;
+  const imageLoaded = [];
+
+  for ( const index in images){
+    imageLoaded.push(
+      <Image
+        className="object-contain w-full h-full"
+        src={ images[+index] }
+        height={1920}
+        width={1080}
+        alt={`No.${ ( +index ) + 1} image of this project's showcase`}/>
+    )
+  };
 
 
   return (
@@ -35,12 +47,7 @@ export const ImageScroller = ( { images }: { images: string[] } ) => {
           
           <div className="w-full h-[90%] animation-showcase-image-appearance">
             <ImageWrapForModal imageURL={ images[ currentIndex ] }>
-              <Image
-                className="object-contain w-full h-full"
-                src={ images[currentIndex] }
-                height={1920}
-                width={1080}
-                alt={`No.${currentIndex+1} image of this project's showcase`}/>
+              { imageLoaded[currentIndex] }
             </ImageWrapForModal>
           </div>
 
