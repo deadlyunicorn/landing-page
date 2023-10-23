@@ -11,10 +11,12 @@ const ShowcaseDisplay = async( { params }: {
   }
 }) => {
   
-  const showcaseItems = mongoClient.db('landing_page').collection('showcase_items');
-  const showcaseItem  = await showcaseItems.findOne( { permalink: params.permalink } ) as unknown as showcaseItem | null;
-
-
+  const showcaseItem = await fetch ( `${process.env.SERVER_URL}/api/portfolio-items/${params.permalink}`, { 
+    next: {
+      revalidate: 3600 * 24
+    }
+  })
+    .then( async( res ) => res.ok? await res.json() :null);
   // const showcaseItem:showcaseItem =
   //   {
   //     title: "CoolItem",
@@ -67,7 +69,7 @@ const ShowcaseDisplay = async( { params }: {
               flex h-full 
               items-center justify-center 
               text-lg md:text-5xl">
-              <p className="animation-description"> Showcase item not found. </p>
+              <p className="animation-description"> There was an error getting the showcase. </p>
             </div>
           </PageSection>
 

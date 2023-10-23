@@ -6,8 +6,12 @@ import { WordCloud } from "./WordCloud";
 const AboutSection = async() => {
 
 
-  const description =  
-  await mongoClient.db('landing_page').collection('sections').findOne( { section: "about" } ).then( res => res? res.content :null );
+  const description =  await fetch( `${process.env.SERVER_URL}/api/about`,{
+    next:{
+      revalidate:3600
+    }
+  })
+    .then( async( res ) => res.ok? await res.json() :null );
   // "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
   return(
   <PageSection
@@ -27,7 +31,7 @@ const AboutSection = async() => {
       md:text-2xl ">
       <p
         dangerouslySetInnerHTML={
-          {__html: description}
+          {__html: description || "There was an error getting this section. <br/> Please try again."}
         } 
         className="
          bg-clip-text animation-description

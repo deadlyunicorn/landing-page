@@ -20,19 +20,16 @@ export const Showcase = async()=> {
   //   }
   // const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
   
-  const showcaseItemsCollection = mongoClient.db('landing_page').collection('showcase_items');
-  
-  const showcaseItems: showcaseItem[] = [];
-  const showcaseItemsCursor  = showcaseItemsCollection.aggregate([{
-    $sort: { 
-      date_of_creation : -1 
+  const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`,{
+    next:{
+      revalidate: 3600
     }
-  }]);
+  })
+  .then(
+    async( res ) => res.ok? await res.json() :null
+  );
 
-  for await ( const item of showcaseItemsCursor ){
-    const {_id, ...showcaseItem} = item as unknown as showcaseItemOnDB; 
-    showcaseItems.push( showcaseItem );
-  }
+
 
 
   return (
