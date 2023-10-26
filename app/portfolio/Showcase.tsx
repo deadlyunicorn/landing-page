@@ -22,8 +22,9 @@ export const Showcase = async()=> {
   
   const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`,{
     next:{
-      revalidate: 3600
-    }
+      revalidate: 3600,
+    },
+    cache: "no-store"
   })
   .then(
     async( res ) => res.ok? await res.json() :null
