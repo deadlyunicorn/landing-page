@@ -2,17 +2,18 @@ import { SectionHeader } from "../lib/SectionHeader";
 import { PageSection } from "../lib/SectionOutline";
 import mongoClient from "../api/mongodb/mongoClient";
 import { WordCloud } from "./WordCloud";
+import { revalidatePath } from "next/cache";
 
 const AboutSection = async() => {
 
 
-  const description =  await fetch( `${process.env.SERVER_URL}/api/about`,{
-    next:{
-      revalidate:3600
-    }
-  })
+  const description =  await fetch( `${process.env.SERVER_URL}/api/about`)
     .then( async( res ) => res.ok? await res.json() :null );
   // "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
+
+  if ( !description ){
+    revalidatePath( '/about' );
+  }
   return(
   <PageSection
     id="about_section">

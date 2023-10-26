@@ -1,9 +1,8 @@
-import mongoClient from "@/app/api/mongodb/mongoClient";
 import { SectionHeader } from "@/app/lib/SectionHeader";
 import { PageSection } from "@/app/lib/SectionOutline";
-import { showcaseItem } from "@/app/types/showcaseItem";
 import { ImageScroller } from "./ImageScroller";
 import { DescriptionModal } from "./DescriptionModal";
+import { revalidatePath } from "next/cache";
 
 const ShowcaseDisplay = async( { params }: { 
   params:{
@@ -17,6 +16,10 @@ const ShowcaseDisplay = async( { params }: {
     }
   })
     .then( async( res ) => res.ok? await res.json() :null);
+
+    if ( !showcaseItem ){
+      revalidatePath(`/portfolio/${params.permalink}`);
+    }
   // const showcaseItem:showcaseItem =
   //   {
   //     title: "CoolItem",

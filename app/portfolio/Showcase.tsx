@@ -2,6 +2,7 @@ import { showcaseItem, showcaseItemOnDB } from "../types/showcaseItem"
 import { ShowcaseClient } from "./ShowcaseClient"
 import mongoClient from "../api/mongodb/mongoClient";
 import "@/app/portfolio/showcaseAnimations.scss"
+import { revalidatePath } from "next/cache";
 
 export const Showcase = async()=> {
 
@@ -20,15 +21,16 @@ export const Showcase = async()=> {
   //   }
   // const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
   
-  const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`,{
-    next:{
-      revalidate: 3600,
-    },
-    cache: "no-store"
-  })
+  const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`)
   .then(
     async( res ) => res.ok? await res.json() :null
   );
+
+  if ( !showcaseItems ){
+    revalidatePath('/portfolio');
+  }
+
+  
 
 
 
