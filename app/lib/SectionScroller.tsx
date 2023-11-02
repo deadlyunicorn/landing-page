@@ -115,6 +115,11 @@ export const SectionScroller = () => {
         {
           sections.map( ( section, key ) => (
               <Link
+                aria-label={
+                  "Jump to the " +
+                  ( section == '/' 
+                  ? 'table of contents' 
+                  : section.slice(1) ) + " section"}
                 tabIndex={0}
                 className="group outline-none"
                 key={ `${section}_${key}` }
