@@ -42,22 +42,38 @@ const insertShowcaseItems = async(
   
   console.log( 
     await insertShowcaseItems({
-      title: "YTMusic Listener",
-      date_of_creation: new Date( '16 June 2023' ),
-      fullDescription: '<center><a href="https://chrome.google.com/webstore/detail/ytmusic-listener/oolbocgobnnjceiilnbomnahldmpchof">YTMusic Listener</a> is built using the <b>Chrome Extension API</b>.\
+      title: "Document Editor",
+      date_of_creation: new Date( '02 April 2023' ),
+      fullDescription: '<center><a href="https://github.com/deadlyunicorn/document-editor">Document Editor</a> is a web app built using <b>React</b>. It also uses <b>Redux</b> for state management. \
+      <br/><br/> I started developing it after I got frustrated when I was editing a document in some Office Tool. \
+      <br/><br/>It is not intended for serious use and it might not work as intended for every browser. It <b>was</b> mostly made for personal use.\
+      </center>\
+      Some things it can do:\
+      <li>Floating menu for text editing</li>\
+      <li>Add/Remove pages</li>\
+      <li>Remembers user\'s color preferences ( via localStorage API ) </li>\
+      <li>Most rich text editing tools</li>\
+      <li>Select from 4-5 different Google Fonts</li>\
       <br/>\
-      It checks whether you are listening to some song in <b>Youtube Music</b> and automatically opens <b>Discord</b> on your Browser and updates your status the way a normal user would do, but <em>programmatically</em>.\
-      </center>',
+      A typical work flow goes like:\
+      <br/>1. Create the document\
+      <br/>2. Right click, &quot;Print...&quot;( browser-provided )\
+      <br/>3. Save the pages as a PDF\
+      <center>\
+      <br/> ( excluding the last page which is used for some tools )\
+      <br/>\
+      <a href="https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/sample_document_creator.pdf">View an example</a>.\
+      </center>\
+      ',
       images: [
-        "https://lh3.googleusercontent.com/J7sxMQl3ojKAXyuUWu0DNfHaWdRGZ-uYtT2JxF57l2mD_n3dezWlpTXmD1vjJudUJj3NwkSum8CirUa8-Y9TglKe8w=w1920-h1080-e365-rj-sc0x00ffffff",
-        "https://lh3.googleusercontent.com/7B9sItvRmAQddpZFtqQkbmAh10E6AAq5k8KeL_XTHy1XftNEm4GnLiqt1cym2y3mcn6Ya7oZXuEalnCTWn4SfBp060o=w1920-h1080-e365-rj-sc0x00ffffff",
-        "https://lh3.googleusercontent.com/hjXzjGZV4-DOWYxmHoxNpnhhDUGnWXsXno9fb2ouUHJ1oQ13cFtDyhFLfwoUt1lGc_fsyXyKHWi-ShKNXxvMz04Artw=w1920-h1080-e365-rj-sc0x00ffffff",
-        "https://lh3.googleusercontent.com/XqTueM80E4b6Z2dALfhK0TlvvkJ57_d27EAuIFTVWFGH1flnviWw4c_PdYe_vD-IV0Y6Hdcgce6BfNsneM-pQBkZog=w1920-h1080-e365-rj-sc0x00ffffff",
-        "https://lh3.googleusercontent.com/-fjimbOV0NHsT2E_4bG_wjiOK3dt8zmKKnfAwpKaXGXWHdou075tdUsAJyTx0Zkim3RyClfRmnanZEg2t3PFmmNc=w1920-h1080-e365-rj-sc0x00ffffff",
+        "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/Doc_editor_sample.png",
+        "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/Doc_editor_edit_menu.png",
+        "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/Doc_editor_settings_menu.png",
+        "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/Doc_editor_print_menu.png",
       ],
-      permalink: 'ytmusic-listener',
-      shortDescription: 'This app shares YTMusic to Discord',
-      thumbnail: "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/yt-music-listener/YT_listener_512.png",
+      permalink: 'document-editor',
+      shortDescription: 'An Alternative Document Editor',
+      thumbnail: "https://deadlyunicorn.s3.eu-central-1.amazonaws.com/landing-page/showcases/document-editor/Doc_editor_edit_menu.png",
     })
   )
 })()
