@@ -15,7 +15,7 @@ export const UsefulLinks = () => (
 const UsefulLinkItem = ( { href, children }: { href: string, children: ReactNode } ) => (
   <li
     className="relative group overflow-visible text-lg md:text-2xl">
-    <Link 
+    <a 
       target="_blank"
       className="peer outline-none group"
       tabIndex={0} 
@@ -28,7 +28,7 @@ const UsefulLinkItem = ( { href, children }: { href: string, children: ReactNode
       absolute bg-slate-950 dark:bg-slate-200 bottom-0 left-0"/>
 
       { children }
-    </Link>
+    </a>
     <span className="
       -z-10 
       left-0 absolute 
