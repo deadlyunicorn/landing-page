@@ -12,7 +12,7 @@ const ShowcaseDisplay = async( { params }: {
   
   const showcaseItem = await fetch ( `${process.env.SERVER_URL}/api/portfolio-items/${params.permalink}`, { 
     next: {
-      revalidate: 3600 * 24
+      revalidate: 60 * 5 //seconds  // IDK - 24 hours doesn't seem to work.. 
     }
   })
     .then( async( res ) => res.ok? await res.json() :null);
