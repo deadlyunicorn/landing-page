@@ -27,7 +27,7 @@ const ContactSection = () => (
           <a 
             tabIndex={0}
             className="outline-none peer animation-slide-from-left"
-            href="mailto:retroalex1008@gmail.com"> retroalex1008@gmail.com
+            href="mailto:petrache.dev@gmail.com"> petrache.dev@gmail.com
 
           </a>
           <div className="
@@ -36,7 +36,7 @@ const ContactSection = () => (
               absolute bg-slate-950 dark:bg-slate-200 bottom-0"/>
         </div> 
         <br/>
-        <p className="animation-slide-from-down">I will be available for job offers after the end of June 2024.</p>
+        <p className="animation-slide-from-down">I am open to job offers.</p>
       </div>
     </section>
   </PageSection>
