@@ -1,19 +1,11 @@
 import { SectionHeader } from "../lib/SectionHeader";
 import { PageSection } from "../lib/SectionOutline";
-import mongoClient from "../api/mongodb/mongoClient";
 import { WordCloud } from "./WordCloud";
-import { revalidatePath } from "next/cache";
+import { UnderlineAnimationComponent } from "../lib/UnderlineAnimationComponent";
+import { ReactNode } from "react";
 
-const AboutSection = async() => {
+const AboutSection = () => {
 
-
-  const description =  await fetch( `${process.env.SERVER_URL}/api/about`)
-    .then( async( res ) => res.ok? await res.json() :null );
-  // "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
-
-  if ( !description ){
-    revalidatePath( '/about' );
-  }
   return(
   <PageSection
     id="about_section">
@@ -25,26 +17,61 @@ const AboutSection = async() => {
       </SectionHeader>
 
 
-    <div className="
-      h-full 
-      mb-[10vh]
-      flex items-center justify-center 
-      md:text-2xl ">
-      <p
-        dangerouslySetInnerHTML={
-          {__html: description || "There was an error getting this section. <br/> Please try again."}
-        } 
-        className="
-         bg-clip-text animation-description
-        bg-gradient-to-r from-transparent dark:to-white to-black
-        from-[-200%] to-[100%]
-        bg-no-repeat 
-        text-center text-transparent"/>
-    </div>
+    <Description>
+        <p>
+          My name is Alexander Petrache and I am a Fullstack developer ( Web & Mobile )
+          <br/>I have significant experience with Next.js* and Flutter.
+          <br/>
+          <br/>Regarding databases, I am more familiar with MongoDB, but also know some fundamental SQL.
+          <br/>Technologies I really like and I am familiar with are Git, Typescript and TailwindCSS. 
+          <br/>I mainly have experience through personal projects.
+        </p>
+        <div className="text-base  flex items-center justify-center mb-1">
+          Be sure to check my&nbsp;
+            <a 
+              target="_blank"
+              className="outline-none group relative
+              text-stone-700 dark:text-stone-400" 
+              href="/github">
+                GitHub
+                <UnderlineAnimationComponent/>
+            </a>
+        </div>
+        <p>I am also a Cyber Security enthusiast.</p>
+        <br/>
+        <br/><span className="text-base">*Next.js is a Fullstack Javascript Framework based on React.js</span>
+    </Description>
+    
 
     
   </PageSection>
   )
+
+
 }
 
 export default AboutSection;
+
+
+const Description = ( {children}: {children: ReactNode}) => (
+  
+  <div className="
+      h-full animationAppear
+      mb-[10vh] relative
+      flex items-center justify-center 
+      md:text-2xl ">
+      <div
+        className="
+         bg-clip-text animation-description
+        bg-gradient-to-l from-stone-400 dark:from-stone-700 dark:to-white to-black
+        from-[-20%] to-[50%]
+        bg-no-repeat
+        text-center text-transparent">
+        {children}
+      </div>
+      <div className="absolute text-center -z-10 text-[#00000030] dark:text-[#FFFFFF30] blur-[4px] ">
+        {children}
+      </div>
+    </div>
+
+)

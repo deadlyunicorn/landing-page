@@ -91,17 +91,17 @@
 }
 
 .animation-description{
-  animation: description 2s;
+  animation: description 6s;
   background-clip: text;
   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 
 }
 
 @keyframes description {
-  0% {
-    transform: scaleX( -1 );
-    opacity: 0%;
-    background-position-x: -500px;
+  0%{ opacity: 0;}
+  40% {
+    opacity: 0;
+    background-position-x: -1000px;
   }
   100% {
   }
