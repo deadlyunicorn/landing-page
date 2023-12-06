@@ -36,7 +36,10 @@ const ContactSection = () => (
               absolute bg-slate-950 dark:bg-slate-200 bottom-0"/>
         </div> 
         <br/>
-        <p className="animation-slide-from-down">I am open to job offers.</p>
+        <p className="animation-slide-from-down">
+          Graduating in June 2024. 
+          <br/>Looking for an internship or regular job offer.
+        </p>
       </div>
     </section>
   </PageSection>

@@ -4,11 +4,11 @@ import { SectionScroller } from './lib/SectionScroller'
 import { DarkMode } from './lib/DarkMode'
 
 export const metadata: Metadata = {
-  title: 'deadlyunicorn - A Web developer',
+  title: 'deadlyunicorn - A Fullstack developer',
   description: 
     'Welcome to my landing page! \
-    I am deadlyunicorn a Web developer, \
-    mainly working with React - NextJS.',
+    I am Alexander Petrache a Fullstack developer, \
+    mainly working with React.JS ( Next.JS ) and Flutter.',
 }
 
 export default function RootLayout({

@@ -23,14 +23,14 @@ const Home = () => {
               <h2 className="text-2xl font-extralight
                 invisible
                 place-self-center justify-self-end ">
-                  A Web Developer
+                  A Fullstack Developer
                 </h2>
               <h2 className="
                 text-2xl font-extralight
                 place-self-center justify-self-end
                 animation-invisible-1s
                 animation-webDeveloperHeader">
-                A Web Developer
+                A Fullstack Developer
               </h2>
             </div>
           </div>

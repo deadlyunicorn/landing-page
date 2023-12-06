@@ -2,23 +2,20 @@ export const WordCloud = () => {
 
 
   const words = [
-    "NextJS",
+    "Next.JS",
+    "Backend",
+    "Frontend",
+    "Fullstack",
     "Typescript",
     "NodeJS",
-    "React",
+    "React.JS",
     "Cyber Security",
     "Flutter",
     "AI",
     "Linux",
     "MongoDB",
-    "Virtual Reality",
-    "Mixed Reality",
-    "Cloud Services",
-    "Inkscape",
-    "Chrome Extension API",
+    "Figma",
     "AWS",
-    "Puppeteer",
-
   ]
 
   const finalWordsArray: string[] = [];
