@@ -39,7 +39,7 @@ const AboutSection = () => {
         </div>
         <p>I am also a Cyber Security enthusiast.</p>
         <br/>
-        <br/><span className="text-base">*Next.js is a Fullstack Javascript Framework based on React.js</span>
+        <br/><span className="text-sm md:text-base">*Next.js is a Fullstack Javascript Framework based on React.js</span>
     </Description>
     
 
