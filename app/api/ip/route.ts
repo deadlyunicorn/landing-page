@@ -8,7 +8,14 @@ export const GET = async(
     const ip = String ( request.ip );
 
     try{
-        return await getDetailsOf( ip );
+        // return await getDetailsOf( ip );
+        return NextResponse.json({
+            ip: request.ip,
+            geo: request.geo,
+            signal: request.signal,
+            url: request.url
+
+        })
 
     }
     catch( error ){
