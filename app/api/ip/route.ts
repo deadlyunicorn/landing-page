@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDetailsOf } from "./getDetailsOfIp";
 
-const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic'
 
 export const GET = async( 
     request: NextRequest, 
