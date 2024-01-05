@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import mongoClient from "../mongodb/mongoClient";
+import { notFound } from "next/navigation";
 
 export const GET = async ( request: NextRequest, context: { params: { section: string } }) => {
 
@@ -13,6 +14,7 @@ export const GET = async ( request: NextRequest, context: { params: { section: s
     return NextResponse.json( description );
   }
   catch( err ){
+    notFound();
     console.log( " Error on /api/[section]/");
     return NextResponse.json( null );
   }
