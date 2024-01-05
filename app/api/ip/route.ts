@@ -21,7 +21,8 @@ export const GET = async(
     catch( error ){
         console.log( error );
         return NextResponse.json({
-            error: "Can't process your request."
+            error: "Can't process your request.",
+            erro2: `${error}`
         });
     }
 
