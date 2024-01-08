@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 export const UsefulLinks = () => (
-  <ul className="grid grid-cols-2 
+  <ul className="grid grid-cols-2 overflow-visible
   [&>*:nth-child(even)]:place-self-end 
   gap-x-10 md:gap-x-20"> 
     <UsefulLinkItem href="/linkedin">LinkedIn</UsefulLinkItem>
@@ -22,7 +22,7 @@ const UsefulLinkItem = ( { href, children }: { href: string, children: ReactNode
       href={ href }>
     
       <div className="
-      h-[1px] 
+      h-[1px]  
       group-hover:animation-ToCHover
       group-focus:animation-ToCHover
       absolute bg-slate-950 dark:bg-slate-200 bottom-0 left-0"/>

@@ -12,11 +12,10 @@ const ContactSection = () => (
     </SectionHeader>
     <section className="
       h-[20vh] px-4 
-      flex flex-col 
+      flex flex-col
       items-center justify-center 
-      gap-y-8 md:gap-y-16
-      animation-slide-from-right
-      ">
+      gap-y-8 md:gap-y-16 overflow-visible
+      animation-slide-from-right">
       <h3 className="text-3xl md:text-5xl ">Links</h3>
       <UsefulLinks/>
     </section>
