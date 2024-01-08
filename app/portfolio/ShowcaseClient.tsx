@@ -11,6 +11,13 @@ import "@/app/portfolio/showcaseAnimations.scss"
 export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem[] } ) => {
 
   const [ showcaseIndex, setShowcaseIndex ] = useState( 0 );
+  useEffect( ()=> {
+    onresize = () => {
+      setShowcaseIndex(0);
+    }
+  },[])
+  useAnimationOfEntriesRestart( showcaseIndex) ;
+
   const showcaseItemsLength = showcaseItems.length;
   const currentItem1Small = showcaseItems[ showcaseIndex * 2 ];
   const currentItem2Small = showcaseItems[ showcaseIndex * 2 + 1 ];
@@ -21,18 +28,14 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
   const currentItem3Medium = showcaseItems[ showcaseIndex * 4 + 2 ];
   const currentItem4Medium = showcaseItems[ showcaseIndex * 4 + 3 ];
 
-  useEffect( ()=> {
-    onresize = () => {
-      setShowcaseIndex(0);
-    }
-  },[])
-
-
+  
 
   return (
-    <section className="h-full mb-[10vh] flex w-full 
-    animation-item-entry
-    ">
+    <section 
+      id="entry-section"
+      className="h-full mb-[10vh] flex w-full 
+      animation-item-entry
+      ">
       
       <div className="w-[10%] items-center flex md:hidden">
       <SelectionButtonWrapper>
@@ -116,6 +119,22 @@ export const ShowcaseClient = ( { showcaseItems }: { showcaseItems: showcaseItem
 
     </section>
   )
+
+}
+
+const useAnimationOfEntriesRestart = ( showcaseIndex: number ) => {
+  useEffect(() => {
+
+    const entrySection = document.getElementById("entry-section");
+    entrySection?.classList.remove("animation-item-entry");
+    entrySection?.offsetWidth; //lmao who designed html
+
+
+    //https://css-tricks.com/restart-css-animation/
+    //replacing the element had bugs..
+    entrySection?.classList.add("animation-item-entry");
+
+  }, [showcaseIndex]);
 }
 
 
