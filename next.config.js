@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images:{
-    domains:["deadlyunicorn.s3.eu-central-1.amazonaws.com","lh3.googleusercontent.com","user-images.githubusercontent.com"]
+    remotePatterns:[
+      {
+        hostname: "deadlyunicorn.s3.eu-central-1.amazonaws.com",
+        protocol: "https"
+      },
+      {
+        hostname: "user-images.githubusercontent.com",
+        protocol: "https"
+      },
+      {
+        hostname: "lh3.googleusercontent.com",
+        protocol: "https"
+      },
+    ]
   }
 }
 
