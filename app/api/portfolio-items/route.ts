@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
+
 import mongoClient from "../mongodb/mongoClient";
 import { showcaseItem, showcaseItemOnDB } from "@/app/types/showcaseItem";
-import { revalidatePath } from "next/cache";
 
 export const GET = async () => {
 

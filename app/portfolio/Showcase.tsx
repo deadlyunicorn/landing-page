@@ -21,7 +21,10 @@ export const Showcase = async()=> {
   //   }
   // const showcaseItems: showcaseItem[] = new Array(5).fill( showcaseItem )
   
-  const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`)
+  const showcaseItems = await fetch( `${process.env.SERVER_URL}/api/portfolio-items`,
+  {
+    cache: "no-store"
+  })
   .then(
     async( res ) => res.ok? await res.json() :null
   );
