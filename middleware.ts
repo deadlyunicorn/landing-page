@@ -13,9 +13,11 @@ const middleware = async( request: NextRequest ) => {
       return NextResponse.redirect('https://twitter.com/deadlyunicorn_/');
     case "/links":
       return NextResponse.redirect('https://linktr.ee/deadlyunicorn/');
+    case "/whatsapp":
+      return NextResponse.redirect('https://wa.me/qr/UFHJA7NFFFD4A1');
     case "/resume":
     case "/cv":
-      return NextResponse.redirect('https://cv-job-resume.vercel.app/');
+      return NextResponse.redirect('https://deadlyunicorn.s3.eu-central-1.amazonaws.com/CV/CV_Petrache_Alexander.pdf');
 
 
   }

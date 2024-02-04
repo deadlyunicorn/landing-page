@@ -6,9 +6,9 @@ export const UsefulLinks = () => (
   [&>*:nth-child(even)]:place-self-end 
   gap-x-10 md:gap-x-20"> 
     <UsefulLinkItem href="/linkedin">LinkedIn</UsefulLinkItem>
-    <UsefulLinkItem href="/github">Github</UsefulLinkItem>
-    <UsefulLinkItem href="/x">X Social</UsefulLinkItem>
     <UsefulLinkItem href="/resume">CV</UsefulLinkItem>
+    <UsefulLinkItem href="/whatsapp">WhatsApp</UsefulLinkItem>
+    <UsefulLinkItem href="/github">Github</UsefulLinkItem>
   </ul>
 )
 
