@@ -37,7 +37,10 @@ const ContactSection = () => (
         <br/>
         <p className="animation-slide-from-down">
           Graduating in June 2024. 
-          <br/>Looking for an internship or regular job offer.
+          <br/>
+          <br/>     🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+          <br/>🌟 Looking for an internship!  🌟
+          <br/>     🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
         </p>
       </div>
     </section>

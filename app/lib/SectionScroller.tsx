@@ -173,8 +173,8 @@ export const SectionScroller = () => {
         tabIndex={0} 
         className="group outline-none overflow-visible relative"
         href={ '/portfolio' }>
-        <BlurSpan> Back </BlurSpan>
-        Back
+        <BlurSpan>Portfolio</BlurSpan>
+        Portfolio
       </Link>
       </div>
       :
