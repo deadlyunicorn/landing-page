@@ -123,6 +123,7 @@ export const SectionScroller = () => {
       }
     } else {
       setHasMounted(true);
+      setDeltaY(0);
     }
   });
 
@@ -176,7 +177,7 @@ export const SectionScroller = () => {
       text-3xl md:text-5xl
       px-4 pb-2"
       >
-        <SlideCurve deltaY={deltaY} />
+        <SlideCurve deltaY={deltaY} notPortfolioPreview={notPortfolioPreview}/>
 
         {prevSection ? (
           <Link
@@ -221,7 +222,7 @@ export const SectionScroller = () => {
   );
 };
 
-const SlideCurve = ({ deltaY }: { deltaY: number }) => {
+const SlideCurve = ({ deltaY, notPortfolioPreview }: { deltaY: number, notPortfolioPreview: boolean }) => {
   const progress = Math.max(Math.abs(deltaY) / 200, 0.01);
   const borderRadius = 64 / (progress * progress);
 
@@ -239,7 +240,7 @@ const SlideCurve = ({ deltaY }: { deltaY: number }) => {
           height: `10vh`,
           top: deltaY < 0 ? (-24 * 1) / progress : undefined,
           bottom: deltaY < 0 ? undefined : (-24 * 1) / progress,
-          display: deltaY == 0 ? "none" : "inline",
+          display: deltaY == 0 || !notPortfolioPreview  ? "none" : "inline",
         } //$
       }
     ></div>
