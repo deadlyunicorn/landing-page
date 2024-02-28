@@ -19,7 +19,7 @@ const AboutSection = () => {
 
     <Description>
         <p>
-          My name is Alexander Petrache and I am a Fullstack developer ( Web & Mobile )
+          My name is Alexander Petrache and I am a Software developer ( Web & Mobile )
           <br/>I have significant experience with Next.js* and Flutter.
           <br/>
           <br/>Regarding databases, I am more familiar with MongoDB, but also know some fundamental SQL.

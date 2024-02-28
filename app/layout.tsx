@@ -4,10 +4,10 @@ import { SectionScroller } from './lib/SectionScroller'
 import { DarkMode } from './lib/DarkMode'
 
 export const metadata: Metadata = {
-  title: 'deadlyunicorn - A Fullstack developer',
+  title: 'deadlyunicorn - A Software developer',
   description: 
     'Welcome to my landing page! \
-    I am Alexander Petrache a Fullstack developer, \
+    I am Alexander Petrache a Software developer, \
     mainly working with React.JS ( Next.JS ) and Flutter.',
 }
 
