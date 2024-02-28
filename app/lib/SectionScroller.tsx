@@ -80,7 +80,6 @@ export const SectionScroller = () => {
           tempDeltaY > 0
             ? Math.min(wheelEvent.deltaY, 20)
             : Math.max(wheelEvent.deltaY, -20);
-        console.log(newDeltaY, deltaY);
         setDeltaY((current) => {
           if (newDeltaY > 0 && deltaY < 0) return 0;
           if (newDeltaY < 0 && deltaY > 0) return 0;
