@@ -29,7 +29,7 @@ export const DarkMode = () => {
 
   return (
 
-    <aside className="fixed top-2  w-full flex justify-center"> 
+    <aside className="fixed top-2  w-full flex justify-center z-10"> 
       { hasMounted && 
       <div className="relative overflow-visible w-12 h-7 animationAppear">
         <button 
