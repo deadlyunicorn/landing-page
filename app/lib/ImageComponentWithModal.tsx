@@ -66,9 +66,9 @@ export const ImageWrapForModal = ( { imageURL, children }: {
             animation-modal-appearance
             items-center justify-center  
             flex flex-col
-            h-[80vh] w-[90vw]">
+            w-[90vw]">
             <Image
-              className="object-contain"
+              className="object-contain max-h-[60vh] mb-4"
               width=  { 1920 }
               height= { 1080 }
               src={ imageURL } 

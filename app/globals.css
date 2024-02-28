@@ -2,17 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  /* //? removing the above will mess up /portfolio */
 }
 
-h1,h2,h3,p{
+#full_portfolio_item_description a:hover {
+  border-bottom: solid 1px;
+}
+
+.dark #full_portfolio_item_description a {
+  color: #60a5fa;
+}
+
+#full_portfolio_item_description a {
+  color: #1d4ed8;
+}
+
+h1,
+h2,
+h3,
+p {
   overflow: visible;
 }
 
-.loading_bar{
+.loading_bar {
   animation: loadingAnimation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -21,73 +37,71 @@ h1,h2,h3,p{
 }
 
 @keyframes loadingAnimation {
-  0%{
+  0% {
     left: 10%;
     width: 20px;
     filter: brightness(50%);
   }
-  20%{
+  20% {
     width: 40px;
   }
-  50%{
+  50% {
     filter: brightness(200%);
     width: 40px;
   }
-  80%{
+  80% {
     width: 40px;
   }
-  100%{
+  100% {
     left: 70%;
     width: 20px;
     filter: brightness(50%);
   }
 }
 
-.animationAppear{
+.animationAppear {
   animation: appearance 2s;
   animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 @keyframes appearance {
-  0%{
+  0% {
     opacity: 0%;
   }
-  100%{
+  100% {
     opacity: 100%;
   }
 }
 
-.darkModeSwitchSlideRight{
+.darkModeSwitchSlideRight {
   animation: slideRight 0.2s;
-  left: 50%
-
+  left: 50%;
 }
-.darkModeSwitchSlideLeft{
+.darkModeSwitchSlideLeft {
   animation: slideLeft 0.2s;
-  left: 0%
+  left: 0%;
 }
 
 @keyframes slideRight {
-  0%{
-    left: 25%
+  0% {
+    left: 25%;
   }
-  100%{
-    left: 50%
+  100% {
+    left: 50%;
   }
 }
 @keyframes slideLeft {
-  0%{
-    left: 25%
+  0% {
+    left: 25%;
   }
-  100%{
-    left: 0%
+  100% {
+    left: 0%;
   }
 }
 
-#portfolio_item_dialog a{
+#portfolio_item_dialog a {
   color: rgb(37 99 235);
 }
-#portfolio_item_dialog a:hover{
+#portfolio_item_dialog a:hover {
   text-decoration: underline;
 }
-
