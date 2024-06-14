@@ -20,7 +20,7 @@ const AboutSection = () => {
     <Description>
         <p>
           My name is Alexander Petrache and I am a Software developer ( Web & Mobile )
-          <br/>I have significant experience with Next.js* and Flutter.
+          <br/>I have significant experience with Next.js and Flutter.
           <br/>
           <br/>Regarding databases, I am more familiar with MongoDB, but also know some fundamental SQL.
           <br/>Technologies I really like and I am familiar with are Git, Typescript and TailwindCSS. 
@@ -38,8 +38,6 @@ const AboutSection = () => {
             </a>
         </div>
         <p>I am also a Cyber Security enthusiast.</p>
-        <br/>
-        <br/><span className="text-sm md:text-base">*Next.js is a Fullstack Javascript Framework based on React.js</span>
     </Description>
     
 
