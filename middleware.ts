@@ -17,7 +17,7 @@ const middleware = async( request: NextRequest ) => {
       return NextResponse.redirect('https://wa.me/qr/UFHJA7NFFFD4A1');
     case "/resume":
     case "/cv":
-      return NextResponse.redirect('https://deadlyunicorn.s3.eu-central-1.amazonaws.com/CV/CV_Petrache_Alexander.pdf');
+      return NextResponse.redirect('https://deadlyunicorn.s3.eu-central-1.amazonaws.com/CV/CV_Petrache_Alexandros.pdf');
     case "/webstore":
       return NextResponse.redirect('https://the-cool-webstore-deadlyunicorn.vercel.app/');
     case "/social_app":
